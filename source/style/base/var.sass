@@ -1,0 +1,166 @@
+// DEFOULT COLORS
+$black: #000
+$white: #fff
+$orange: #ffa500
+
+
+// DEFOULT MIXINS
+
+// animate for blocks
+=animate($name)
+	transition-property: all
+	transition-duration: 1s
+	animation-name: $name
+	animation-duration: 1s
+	animation-fill-mode: forwards
+
+
+
+// DEFOULT CLASSES
+
+// wrappers
+.wrapper-programs
+	display: flex
+	width: 100vw
+	position: relative
+	background-color: $black
+	overflow: hidden
+
+	@media screen and (min-width: 768px)
+		height: 100vh
+
+// programs name
+.programs_name
+	color: $white
+
+// forms-section
+.forms-section
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100%
+
+	color: $orange
+
+	@media screen and (min-width: 768px)
+		height: 100vh
+
+// forms-header
+.forms-header
+	margin-top: 50px
+	width: 80%
+	text-align: center
+
+	color: $orange
+
+	@media screen and (min-width: 768px)
+			margin-top: 5px
+
+// btn
+.btn
+	background-color: transparent
+	margin: 10px 0 10px 0
+	border: 2px solid $orange
+	border-radius: 20px
+	width: 150px
+	height: 30px
+	cursor: pointer
+	color: $white
+
+	&:hover
+		color: $orange
+
+// form-second > btn-select
+.btn-select // btn
+	padding: 5px
+	width: 35px
+	height: 35px
+	transition-property: width
+	transition-duration: 1s
+	animation-name: btn-selected
+	animation-duration: 1s
+	animation-fill-mode: forwards
+
+.second__li-desc
+	.selected // img
+		position: relative
+		top: -3px
+		left: -1px
+		width: 25px
+		height: 25px
+		animation-name: img-selected
+		animation-duration: 2s
+		animation-fill-mode: forwards
+
+
+// slider-btn
+.slider_btn
+	position: relative
+	top: 40px
+	width: 30px
+	height: 30px
+	svg
+		width: 30px
+		height: 30px
+		cursor: pointer
+		fill: $white
+
+.slider_btn:hover
+	svg
+		fill: $orange
+
+
+// social link
+.soc_item
+	width: 15px
+	height: 15px
+	svg
+		position: relative
+		top: 2px
+		width: 15px
+		height: 15px
+		cursor: pointer
+		fill: $white
+
+.wrapper_soc:hover
+	svg
+		fill: $orange
+
+
+// form style
+.third__form-block
+	input.formError
+		border-color: red
+		color: red
+
+// price
+.third_text-price
+	color: $white
+	margin-top: 10px
+
+// animate display
+// wrappers --> programs
+div.display-none, section.display-none
+	+animate(display-none)
+
+div.display-flex, section.display-flex
+	+animate(display-flex)
+
+div.display-none-rev, section.display-none-rev
+	+animate(display-none-rev)
+
+div.display-flex-rev, section.display-flex-rev
+	+animate(display-flex-rev)
+
+// forms
+div.forms-none, section.forms-none
+	+animate(forms-none)
+
+div.forms-flex, section.forms-flex
+	+animate(forms-flex)
+
+div.forms-none-rev, section.forms-none-rev
+	+animate(forms-none-rev)
+
+div.forms-flex-rev, section.forms-flex-rev
+	+animate(forms-flex-rev)

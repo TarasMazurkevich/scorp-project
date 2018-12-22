@@ -1,0 +1,88 @@
+.third
+	// третья форма
+	@extend .forms-section
+	display: none
+
+	// HEADER
+	&__header
+		@extend .forms-header
+
+	// ARTICLE
+	&__article
+		margin-top: 20px
+		width: 100%
+
+		@media screen and (min-width: 768px)
+			height: 85%
+
+	// ARTIClE > FORM
+	&__form
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		@media screen and (min-width: 768px)
+			flex-direction: row
+			flex-wrap: wrap
+			justify-content: center
+			align-content: center
+			height: 100%
+
+	// ARTIClE > FORM > FORM - block
+	&__form-block
+		display: flex
+		flex-direction: column
+		margin: 10px 0 10px 0
+
+		@media screen and (min-width: 768px)
+			width: 40%
+			align-items: center
+
+		label
+			@media screen and (min-width: 768px)
+				font-size: 20px
+
+		input
+			background-color: transparent
+			margin: 10px 0 10px 0
+			border: 2px solid $orange
+			border-radius: 20px
+			width: 150px
+			height: 30px
+			height: 30px
+			padding-left: 10px
+			color: $white
+
+			@media screen and (min-width: 768px)
+				width: 300px
+				height: 40px
+				font-size: 20px
+
+
+	&__form-block:last-of-type
+		align-items: center
+
+		@media screen and (min-width: 768px)
+			width: 100%
+			margin-top: 20px
+
+		label
+			margin-bottom: 5px
+
+	#date, #date2
+		background-color: inherit
+		margin: 10px 0 10px 0
+		border: 2px solid $orange
+		border-radius: 20px
+		width: 300px
+		height: 40px
+		cursor: pointer
+		padding-left: 10px
+		font-size: 25px
+		color: $orange
+
+	#submit, #submit2
+		@extend .btn
+		width: 300px
+		height: 40px
+		font-size: 25px

@@ -1,0 +1,170 @@
+.wrapper
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-around
+
+	position: relative
+	width: 100vw
+	height: 100vh
+
+	background-color: $black
+	
+	// HEADER
+	.header
+		width: 80%
+		text-align: center
+
+		.title
+			color: $orange
+
+			// animate
+			animation-name: wrapper-header
+			animation-duration: 3s
+
+			@media screen and (min-width: 1px) and (max-width: 401px)
+				font-size: 22px
+
+			@media screen and (min-width: 402px) and (max-width: 576px)
+				font-size: 24px
+
+	// ROW
+	.row
+		width: 100%
+		height: 70%
+
+	// ROW > ARTICLE
+	&__art
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+
+		color: $white
+
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: center
+
+	&__art:first-of-type
+		background-image: url('../img/wrapper/fire.jpg');
+	&__art:last-of-type
+		background-image: url('../img/wrapper/led.jpg');
+
+	
+	&_title
+		animation-name: wrapper-article-title
+		animation-duration: 3s
+		
+
+	
+	// ROW > ARTICLE > BUTTON
+	&_button
+		@extend .btn
+
+	&_button[data-animation="wrapper-article-btn1"]
+		animation-name: wrapper-article-btn
+		animation-duration: 3s
+
+	&_button[data-animation="wrapper-article-btn2"]
+		animation-name: wrapper-article-btn
+		animation-duration: 3s
+
+	// ROW > FOOTER
+	&__footer
+		display: flex
+		flex-direction: column
+		align-items: center
+		opacity: 0
+		animation-name: wrapper-footer
+		animation-duration: 3s
+		animation-delay: 1s
+		animation-fill-mode: forwards
+
+	// ROW > FOOTER > PHONE
+	&_phone
+		margin-bottom: 10px
+		font-size: 26px
+
+		color: $white
+
+		@media screen and (min-width: 1px) and (max-width: 401px)
+			font-size: 22px
+
+		@media screen and (min-width: 402px) and (max-width: 576px)
+			font-size: 24px
+
+	&_phone:hover
+		color: $orange
+
+	// WRAPPER__LIST
+	&__list
+		display: flex
+		justify-content: space-around
+		width: 100%
+
+	// ROW > FOOTER > SOC-Button
+	&_soc
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		border: 1px solid $orange
+		border-radius: 50%
+		background-color: transparent
+		width: 35px
+		height: 35px
+		cursor: pointer
+
+		@media screen and (min-width: 1px) and (max-width: 401px)
+			width: 30px
+			height: 30px
+
+	&_soc svg>path
+		color: $white
+
+	&_we
+		align-self: center
+		margin: 0 5px 0 5px
+	
+	&_we a
+		color: $white
+
+	&_we a:hover
+		color: $orange
+
+	&_soc:hover svg>path
+		color: $orange
+
+
+// gallery
+.gallery
+	position: fixed
+	top: 0
+	left: 0
+	display: none
+	justify-content: center
+	align-items: center
+	background-color: $black
+	width: 100vw
+	height: 100vh
+	z-index: 2
+
+	&_btn-close
+		position: absolute
+		top: 10px
+		right: 10px
+
+	&-block
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100vw
+		height: 100vh
+
+	&-img
+		width: 70%
+		height: 40%
+
+		@media screen and (min-width: 768px)
+			width: 80%
+			height: 100%

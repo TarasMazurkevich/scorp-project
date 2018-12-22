@@ -1,0 +1,88 @@
+.first
+	// первая форма
+	@extend .forms-section
+	
+	// FORM__FIRST > HEADER
+	&__header
+		@extend .forms-header
+	
+	//FORM__FIRST > ARTICLE
+	&__article
+		width: 100%
+
+		@media screen and (min-width: 768px)
+			height: 100%
+
+	// ARTICLE > UL - СПИСОК
+	&__list-people
+		display: flex
+		justify-content: space-around
+		align-content: center
+		flex-wrap: wrap
+		margin-top: 20px
+		width: 100%
+
+		@media screen and (min-width: 768px)
+			margin: 0	
+			height: 100%
+
+	// ARTICLE > UL > LI - ПУНКТЫ
+	&__li-people
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-around
+		margin: 10px 0 10px 0
+		border: 1px solid $orange
+		padding: 10px 0 10px 0
+		width: 90%
+		height: 200px
+		text-align: center
+		cursor: pointer
+
+		@media screen and (min-width: 768px)
+			margin: 40px 0 40px 0
+			border-radius: 10px
+			width: 28%
+
+		svg
+			color: $white
+
+	
+	// смещаем иконки
+	&__li-people:nth-child(5)
+		svg
+			position: relative
+		svg:first-of-type
+			left: 2%
+			bottom: 5px
+		svg:last-of-type
+			left: -2%
+			bottom: 5px
+	&__li-people:last-child
+		svg
+			position: relative
+			left: 2%
+		svg:first-of-type
+			left: 4%
+			bottom: 5px
+		svg:nth-of-type(3)
+			left: 0
+			bottom: 5px
+		svg:last-of-type
+			left: 0
+
+	// UL > LI > ICON-PEOPLE
+	&__li-icon
+		@media screen and (min-width: 768px)
+			width: 100%
+
+	// UL > LI > PRICE
+	&_li-price
+		margin-top: 10px
+	// UL > LI > DESC
+	&__li-desc
+		display: flex
+		flex-direction: column
+		margin-top: 10px
+		color: $white

@@ -1,0 +1,25 @@
+.header
+	display: grid
+
+	&__link-back
+		justify-self: start
+
+	// HOVER
+	&__link-back:hover .header_icon-back svg
+		fill: $orange
+	&__link-back:hover .header_text-back
+		color: $orange
+		
+	&_icon-back
+		display: grid
+		grid-template-columns: auto auto
+		align-items: center
+
+		svg
+			fill: $white
+
+	&_text-back
+		color: $white
+
+	&_title
+		justify-self: center

@@ -1,0 +1,108 @@
+.programs
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100vw
+
+	@media screen and (min-width: 768px)
+		height: 100vh
+		overflow: hidden
+	
+	// PROGRAM > HEADER
+
+	&__header
+		margin-top: 50px
+		width: 80%
+		text-align: center
+
+		color: $orange
+
+		@media screen and (min-width: 768px)
+			margin-top: 5px
+
+	// PROGRAM > ARTICLE
+	&__article
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		margin-top: 30px
+		width: 100vw
+		
+		@media screen and (min-width: 768px)
+			width: 50vw
+
+	// PROGRAM > PROMO
+	&__promo
+		margin-top: 10px
+		text-align: center
+		img
+			width: 70%
+			height: 250px
+
+			@media screen and (min-width: 768px)
+				width: 90%
+
+	// PROGRAM > SLIDER
+	&__slider
+		display: flex
+		justify-content: space-around
+		margin-top: 10px
+		width: 100%
+
+		@media screen and (min-width: 768px)
+			width: 90%
+
+	&__img-block
+		display: flex
+		width: 400px
+		height: auto
+		overflow: hidden
+
+		@media screen and (min-width: 768px)
+			width: 448px
+
+	&__img-ul
+		display: flex
+		width: 2000px
+		height: auto
+		overflow: hidden
+
+	// PROGRAM > SLIDER > IMG
+	&_img
+		img
+			border: 1px solid black
+			width: 100px
+			height: 100px
+
+			@media screen and (min-width: 768px)
+				width: 150px
+				height: 100px
+
+
+	&_img:nth-of-type(even)
+		z-index: 2
+		img
+			position: relative
+			top: 30px
+
+			@media screen and (min-width: 768px)
+				top: 0
+				margin-top: 30px
+
+	// PROGRAM > DESC
+	&_desc
+		margin-top: 5px
+		width: 90%
+		text-align: center
+
+		color: $white
+
+		@media screen and (min-width: 768px)
+			width: 80%
+
+	// PROGRAM > BUTTON
+	&_button
+		@extend .btn
+
+	

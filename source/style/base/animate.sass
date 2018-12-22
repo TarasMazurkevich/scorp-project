@@ -1,0 +1,124 @@
+// анимируем переходы между страницами
+
+// wrapper --> programs
+@keyframes display-none
+	0%
+		transform: translateX(0)
+	100%
+		transform: translateX(-1500px)
+
+@keyframes display-flex
+	0%
+		transform: translateX(1500px)
+	100%
+		transform: translateX(0)
+
+@keyframes display-none-rev
+	0%
+		transform: translateX(0)
+	100%
+		transform: translateX(1500px)
+
+@keyframes display-flex-rev
+	0%
+		transform: translateX(-1500px)
+	100%
+		transform: translateX(0)
+
+// forms
+@keyframes forms-none
+	0%
+		transform: translateY(0)
+	100%
+		transform: translateY(-1500px)
+
+@keyframes forms-flex
+	0%
+		transform: translateY(1500px)
+	100%
+		transform: translateY(0)
+
+@keyframes forms-none-rev
+	0%
+		transform: translateY(0)
+	100%
+		transform: translateY(1500px)
+
+@keyframes forms-flex-rev
+	0%
+		transform: translateY(-1500px)
+	100%
+		transform: translateY(0)
+
+
+
+
+
+
+
+
+
+// Анимируем первую страницу выбора шоу
+@keyframes wrapper-header
+	0%
+		transform: translateY(-200px)
+		opacity: 0
+	60%
+		opacity: 0
+	100%
+		transform: translateY(0)
+		opacity: 1
+
+@keyframes wrapper-article-title
+	0%
+		transform: translateY(-150px)
+		opacity: 0
+	70%
+		transform: translateY(25px)
+		opacity: 1
+	100%
+		transform: translateY(0)
+		opacity: 1
+
+@keyframes wrapper-article-btn
+	0%
+		transform: translateX(-150px)
+		opacity: 0
+	70%
+		transform: translateX(25px)
+		opacity: 1
+	100%
+		transform: translateX(0)
+		opacity: 1
+
+@keyframes wrapper-footer
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+
+
+
+
+
+
+
+// Анимируем кнопку выбора дополнительного реквизита
+@keyframes btn-selected
+	0%
+		width: 150px
+	100%
+		width: 35px
+
+@keyframes btn-selected-reverse
+	0%
+		width: 35px
+	100%
+		width: 150px
+
+@keyframes img-selected
+	0%
+		opacity: 0
+	100%
+		opacity: 1

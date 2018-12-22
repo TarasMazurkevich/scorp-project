@@ -1,0 +1,87 @@
+.aboutus
+	display: grid
+	margin-top: 50px
+
+	&__header
+		text-align: center
+
+
+.artists
+	&__block
+		display: grid
+		justify-items: center
+		grid-row-gap: 20px
+
+		@media screen and (min-width: 768px)
+			padding: 0 10px 0 10px
+
+	&__item
+		display: grid
+		grid-row-gap: 10px
+		justify-items: center
+		padding: 10px 0 10px 0
+		width: 90%
+		text-align: center
+
+		@media screen and (min-width: 768px)
+				grid-template-columns: 1fr 5fr
+				grid-column-gap: 10px
+				justify-items: center
+				align-items: center
+				text-align: left
+
+	&_img
+		max-width: 200px
+		max-height: 200px
+
+	&__desc
+		display: grid
+		grid-row-gap: 10px
+		width: 80%
+		color: $white
+
+		@media screen and (min-width: 768px)
+				grid-row-gap: 10px
+				width: 50%
+
+	&__item:nth-of-type(even)
+		@media screen and (min-width: 768px)
+			grid-template-columns: 1fr 5fr
+
+		.artists_img
+			@media screen and (min-width: 768px)
+				position: relative
+				float: right
+
+		.artists__desc
+			@media screen and (min-width: 768px)
+				position: relative
+				float: left
+
+.general-info
+	display: grid
+	grid-row-gap: 20px
+	margin-top: 25px
+	padding: 0 10px 0 10px
+
+	@media screen and (min-width: 768px)
+		justify-items: center
+		text-align: center
+
+	&_text
+		color: $white
+
+	
+.festivals
+	display: grid
+	grid-row-gap: 5px
+
+	@media screen and (min-width: 768px)
+		text-align: center
+
+	&_item
+		list-style: circle inside
+		color: $orange
+
+		@media screen and (min-width: 768px)
+			list-style: circle outside

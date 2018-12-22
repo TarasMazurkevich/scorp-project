@@ -1,0 +1,27 @@
+.info
+	display: grid
+	grid-row-gap: 50px
+	
+	margin-top: 20px
+
+	text-align: center
+
+	&__block
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-row-gap: 20px
+
+		@media screen and (min-width: 768px)
+			grid-template-columns: repeat(4, auto)
+			justify-content: space-evenly
+
+	&__item
+		display: grid
+		grid-row-gap: 5px
+
+	&_icon
+		align-self: start
+
+	&_text
+		padding: 0 10px 0 10px
+		color: $white
